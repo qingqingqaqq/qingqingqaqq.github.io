@@ -1,0 +1,171 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>我的个人博客 - 记录生活与技术</title><meta name="author" content="qing"><meta name="copyright" content="qing"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="这是一个使用Hexo框架构建的个人博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="我的个人博客">
+<meta property="og:url" content="http://example.com/page/2/index.html">
+<meta property="og:site_name" content="我的个人博客">
+<meta property="og:description" content="这是一个使用Hexo框架构建的个人博客">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/avatar.png">
+<meta property="article:author" content="qing">
+<meta property="article:tag" content="博客,技术,生活,Hexoqing">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/avatar.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/page/2/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '我的个人博客',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg" style="background-image: url(/img/avatar.png);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">18</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">42</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时光档案</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(/img/avatar.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">我的个人博客</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时光档案</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">我的个人博客</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/06/26/Java%E8%BF%9B%E9%98%B6-%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6%E4%B8%8E%E6%B3%A8%E8%A7%A3/" title="Java进阶-反射机制与注解">Java进阶-反射机制与注解</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-06-26T12:20:00.000Z" title="发表于 2025-06-26 20:20:00">2025-06-26</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Java%E8%BF%9B%E9%98%B6/">Java进阶</a></span></div><div class="content">Java反射机制与注解详解什么是反射Java反射机制是指在运行时可以动态获取类的信息，以及动态调用对象的方法的机制。通过反射，我们可以在运行时检查类、接口、字段和方法，还可以实例化对象，调用方法，以及设置或获取字段的值。 反射的主要APIClass类Class类是反射的核心，所有的反射操作都需要从获取Class对象开始： 12345678910// 获取Class对象的三种方式// 1. 通过对象获取String str = &quot;Hello&quot;;Class&lt;?&gt; class1 = str.getClass();// 2. 通过类名获取Class&lt;?&gt; class2 = String.class;// 3. 通过类的完全限定名获取Class&lt;?&gt; class3 = Class.forName(&quot;java.lang.String&quot;);  反射获取类的信息12345678910111213// 获取类的名称String className = class1.getName(); // 完全限定名String...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/06/26/Java%E8%BF%9B%E9%98%B6-Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B8%8E%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3/" title="Java进阶-Lambda表达式与函数式接口">Java进阶-Lambda表达式与函数式接口</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-06-26T12:19:00.000Z" title="发表于 2025-06-26 20:19:00">2025-06-26</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Java%E8%BF%9B%E9%98%B6/">Java进阶</a></span></div><div class="content">Java Lambda表达式与函数式接口详解什么是Lambda表达式Lambda表达式是Java 8引入的一个重要特性，它提供了一种简洁的方式来表示可传递的匿名函数：一种没有名称的函数，但可以作为参数传递给其他方法。 Lambda表达式语法基本语法： 1(parameters) -&gt; expression  或者： 1(parameters) -&gt; &#123; statements; &#125;  示例： 12345678910// 不带参数的Lambda表达式Runnable r = () -&gt; System.out.println(&quot;Hello World&quot;);// 带一个参数的Lambda表达式（可省略参数类型）Consumer&lt;String&gt; c = (String s) -&gt; System.out.println(s);Consumer&lt;String&gt; c = s -&gt; System.out.println(s);  // 简化形式//...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/06/26/Java%E8%BF%9B%E9%98%B6-%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B/" title="Java进阶-多线程编程">Java进阶-多线程编程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-06-26T12:18:00.000Z" title="发表于 2025-06-26 20:18:00">2025-06-26</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Java%E8%BF%9B%E9%98%B6/">Java进阶</a></span></div><div class="content">Java多线程编程详解多线程基础多线程编程是Java中的一大特色，它允许程序同时执行多个线程，提高程序的执行效率和响应能力。 创建线程的方式1. 继承Thread类123456789101112public class MyThread extends Thread &#123;    @Override    public void run() &#123;        for (int i = 0; i &lt; 5; i++) &#123;            System.out.println(&quot;线程ID: &quot; + Thread.currentThread().getId() + &quot; 值: &quot; + i);        &#125;    &#125;&#125;// 使用方式MyThread thread = new MyThread();thread.start(); // 启动线程  2. 实现Runnable接口123456789101112public class MyRunnable implements...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/06/26/Java%E5%9F%BA%E7%A1%80-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6/" title="Java基础-异常处理机制">Java基础-异常处理机制</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-06-26T12:17:00.000Z" title="发表于 2025-06-26 20:17:00">2025-06-26</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Java%E5%9F%BA%E7%A1%80/">Java基础</a></span></div><div class="content">Java异常处理机制详解异常概述异常是程序执行过程中出现的意外情况，Java的异常处理机制可以帮助我们有效地处理这些异常情况，提高程序的健壮性。 Java异常层次结构Java中所有的异常类都继承自Throwable类，其下有两个主要分支：Error和Exception。  Error：表示严重的错误，通常是不可恢复的，如OutOfMemoryError、StackOverflowError等。 Exception：表示可处理的异常，又分为两类： 受检异常（Checked Exception）：必须显式处理的异常，如IOException、SQLException等。 非受检异常（Unchecked Exception）：运行时异常，如NullPointerException、ArrayIndexOutOfBoundsException等。    异常处理语法try-catch-finally语句12345678910111213try &#123;    // 可能抛出异常的代码    int result = 10 / 0;  //...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/06/26/Java%E5%9F%BA%E7%A1%80-%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6%E8%AF%A6%E8%A7%A3/" title="Java基础-集合框架详解">Java基础-集合框架详解</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-06-26T12:16:00.000Z" title="发表于 2025-06-26 20:16:00">2025-06-26</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Java%E5%9F%BA%E7%A1%80/">Java基础</a></span></div><div class="content">Java集合框架详解集合框架概述Java集合框架是Java提供的一套用于存储和操作一组对象的架构。集合框架包括接口、实现类和算法，使开发者可以高效地处理数据。 主要接口与实现类Collection接口Collection是所有集合类的根接口，它定义了集合的基本操作，如添加、删除、清空等。 List接口List是有序集合，可以通过索引访问元素。 常用实现：  ArrayList - 基于数组的List实现，随机访问效率高 12345List&lt;String&gt; arrayList = new ArrayList&lt;&gt;();arrayList.add(&quot;Java&quot;);arrayList.add(&quot;Python&quot;);arrayList.add(&quot;C++&quot;);System.out.println(arrayList.get(1)); // 输出: Python  LinkedList - 基于双向链表的List实现，插入和删除效率高 1234List&lt;String&gt; linkedList =...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/06/26/Java%E5%9F%BA%E7%A1%80-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/" title="Java基础-面向对象编程">Java基础-面向对象编程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-06-26T12:15:00.000Z" title="发表于 2025-06-26 20:15:00">2025-06-26</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Java%E5%9F%BA%E7%A1%80/">Java基础</a></span></div><div class="content">Java面向对象编程全解析什么是面向对象编程面向对象编程(Object-Oriented Programming，简称OOP)是一种程序设计范式，它使用”对象”来设计应用程序和计算机程序。在Java中，面向对象编程是核心概念之一。 Java中的面向对象三大特性1. 封装封装是将数据和操作数据的方法绑定在一起，对数据的访问只能通过已定义的接口。 1234567891011121314151617181920212223public class Person &#123;    private String name; // 私有属性    private int age;     // 私有属性        // 公共的getter和setter方法    public String getName() &#123;        return name;    &#125;        public void setName(String name) &#123;        this.name = name;    &#125;        public int...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/06/26/Hexo%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/" title="Hexo博客框架入门教程">Hexo博客框架入门教程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-06-25T16:33:59.000Z" title="发表于 2025-06-26 00:33:59">2025-06-26</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/">技术教程</a></span></div><div class="content">Hexo博客框架入门教程Hexo是一个快速、简洁且高效的博客框架，使用Node.js开发，让您可以专注于写作而不必关心太多技术细节。本文将介绍如何从零开始搭建一个Hexo博客。 一、环境准备在开始之前，您需要安装以下软件： 1. Node.jsHexo基于Node.js运行，所以首先需要安装Node.js和npm（Node.js的包管理器）。 123# 查看是否安装成功node -vnpm -v  2. GitGit用于部署博客到GitHub Pages等远程服务器，以及安装主题等。 12# 查看是否安装成功git --version  二、安装Hexo使用npm全局安装Hexo命令行工具： 1npm install -g hexo-cli  三、创建博客1. 初始化博客1234# 创建博客文件夹并初始化hexo init blogcd blognpm install  2. 目录结构12345678.├── _config.yml     # 网站配置文件├── package.json    # 应用程序信息├── scaffolds       # 模版文件夹├──...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/06/26/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" title="我的第一篇博客">我的第一篇博客</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-06-25T16:31:57.000Z" title="发表于 2025-06-26 00:31:57">2025-06-26</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a></span></div><div class="content">欢迎使用Hexo这是我的第一篇使用Hexo框架创建的博客文章。Hexo是一个快速、简洁且高效的博客框架，使用Markdown编写文章非常方便。 Markdown简介Markdown是一种轻量级标记语言，创作内容时排版简单直观。以下是一些基本的Markdown语法示例： 1. 标题使用#符号可以创建不同级别的标题，例如： 一级标题二级标题三级标题2. 列表无序列表：  项目1 项目2 项目3  有序列表：  第一步 第二步 第三步  3. 链接和图片这是一个链接示例，指向Hexo官网。 4. 代码块123function hello() &#123;  console.log(&quot;Hello, Hexo!&quot;);&#125;  5. 引用 这是一段引用文本，可以用来突出显示重要的信息或者名言警句。  博客计划在接下来的博客中，我计划分享：  编程技术心得 读书笔记 生活感悟  希望这个博客能记录我的成长历程，也希望能与大家分享有价值的内容！ </div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">qing</div><div class="author-info-description">这是一个使用Hexo框架构建的个人博客</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">18</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">42</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/06/26/hello-world/" title="Hello World">Hello World</a><time datetime="2025-06-26T14:01:45.669Z" title="发表于 2025-06-26 22:01:45">2025-06-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/06/26/Java%E8%BF%9B%E9%98%B6-Kafka%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6/" title="Java进阶-Kafka消息中间件">Java进阶-Kafka消息中间件</a><time datetime="2025-06-26T13:04:00.000Z" title="发表于 2025-06-26 21:04:00">2025-06-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/06/26/%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-%E5%B8%B8%E8%A7%81%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3/" title="编程基础-常见排序算法详解">编程基础-常见排序算法详解</a><time datetime="2025-06-26T12:51:00.000Z" title="发表于 2025-06-26 20:51:00">2025-06-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/06/26/Java%E8%BF%9B%E9%98%B6-%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E4%B8%8ESpring%20Cloud/" title="Java进阶-微服务架构与Spring Cloud">Java进阶-微服务架构与Spring Cloud</a><time datetime="2025-06-26T12:27:00.000Z" title="发表于 2025-06-26 20:27:00">2025-06-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/06/26/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%8EJava-MyBatis%E6%A1%86%E6%9E%B6%E8%AF%A6%E8%A7%A3/" title="数据库与Java-MyBatis框架详解">数据库与Java-MyBatis框架详解</a><time datetime="2025-06-26T12:26:00.000Z" title="发表于 2025-06-26 20:26:00">2025-06-26</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Java-Web%E5%BC%80%E5%8F%91/"><span class="card-category-list-name">Java Web开发</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Java%E5%9F%BA%E7%A1%80/"><span class="card-category-list-name">Java基础</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Java%E8%BF%9B%E9%98%B6/"><span class="card-category-list-name">Java进阶</span><span class="card-category-list-count">5</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Spring%E6%A1%86%E6%9E%B6/"><span class="card-category-list-name">Spring框架</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"><span class="card-category-list-name">技术分享</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/"><span class="card-category-list-name">技术教程</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%8EJava/"><span class="card-category-list-name">数据库与Java</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/"><span class="card-category-list-name">编程基础</span><span class="card-category-list-count">1</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Set/" style="font-size: 1.1em; color: #999">Set</a> <a href="/tags/Spring-Boot/" style="font-size: 1.1em; color: #999">Spring Boot</a> <a href="/tags/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/" style="font-size: 1.1em; color: #999">函数式编程</a> <a href="/tags/%E6%B3%A8%E8%A7%A3/" style="font-size: 1.1em; color: #999">注解</a> <a href="/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/" style="font-size: 1.1em; color: #999">并发编程</a> <a href="/tags/Map/" style="font-size: 1.1em; color: #999">Map</a> <a href="/tags/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" style="font-size: 1.1em; color: #999">异常处理</a> <a href="/tags/IoC/" style="font-size: 1.1em; color: #999">IoC</a> <a href="/tags/Servlet/" style="font-size: 1.1em; color: #999">Servlet</a> <a href="/tags/ORM/" style="font-size: 1.1em; color: #999">ORM</a> <a href="/tags/MySQL/" style="font-size: 1.1em; color: #999">MySQL</a> <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" style="font-size: 1.1em; color: #999">多线程</a> <a href="/tags/JDBC/" style="font-size: 1.1em; color: #999">JDBC</a> <a href="/tags/MyBatis/" style="font-size: 1.1em; color: #999">MyBatis</a> <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/" style="font-size: 1.1em; color: #999">分布式系统</a> <a href="/tags/JavaEE/" style="font-size: 1.1em; color: #999">JavaEE</a> <a href="/tags/%E6%8E%92%E5%BA%8F/" style="font-size: 1.1em; color: #999">排序</a> <a href="/tags/Lambda/" style="font-size: 1.1em; color: #999">Lambda</a> <a href="/tags/%E5%85%A5%E9%97%A8/" style="font-size: 1.1em; color: #999">入门</a> <a href="/tags/Spring-Cloud/" style="font-size: 1.1em; color: #999">Spring Cloud</a> <a href="/tags/Kafka/" style="font-size: 1.1em; color: #999">Kafka</a> <a href="/tags/%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/" style="font-size: 1.1em; color: #999">依赖注入</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 1.5em; color: #99a9bf">数据库</a> <a href="/tags/Hexo/" style="font-size: 1.5em; color: #99a9bf">Hexo</a> <a href="/tags/OOP/" style="font-size: 1.1em; color: #999">OOP</a> <a href="/tags/Web%E5%BC%80%E5%8F%91/" style="font-size: 1.5em; color: #99a9bf">Web开发</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 1.1em; color: #999">算法</a> <a href="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/" style="font-size: 1.5em; color: #99a9bf">微服务</a> <a href="/tags/try-catch/" style="font-size: 1.1em; color: #999">try-catch</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 1.1em; color: #999">数据结构</a> <a href="/tags/%E4%B8%AD%E9%97%B4%E4%BB%B6/" style="font-size: 1.1em; color: #999">中间件</a> <a href="/tags/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/" style="font-size: 1.1em; color: #999">静态博客</a> <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" style="font-size: 1.1em; color: #999">面向对象</a> <a href="/tags/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/" style="font-size: 1.1em; color: #999">消息队列</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 1.1em; color: #999">教程</a> <a href="/tags/%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/" style="font-size: 1.1em; color: #999">集合框架</a> <a href="/tags/MVC/" style="font-size: 1.1em; color: #999">MVC</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 1.1em; color: #999">博客</a> <a href="/tags/%E5%8F%8D%E5%B0%84/" style="font-size: 1.1em; color: #999">反射</a> <a href="/tags/List/" style="font-size: 1.1em; color: #999">List</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/06/">
+            <span class="card-archive-list-date">
+              六月 2025
+            </span>
+            <span class="card-archive-list-count">18</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">18</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-06-26T14:48:30.889Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/img/avatar.png);"><div id="footer-wrap"><div class="copyright">&copy;2025 By qing</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
